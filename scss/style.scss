@@ -1,0 +1,247 @@
+//*                       Подключаем шрифты
+// ========================================
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+// ========================================
+
+
+
+//*                          Сброс настроек
+// ========================================
+// @import '_reset';
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+h1,h2,h3,h4,h5
+{
+    font-size: inherit;
+}
+a, a:visited
+{
+    color: blue;
+    text-decoration: none;
+}
+ul li
+{
+    list-style: none;
+}
+input
+{
+    font-size: inherit;
+}
+button
+{
+    font-size: inherit;
+    cursor: pointer;
+}
+// ========================================
+
+
+//*                              Переменные
+// ========================================
+//*          - Размеры
+$maxW:1260;                 // *Для миксинов
+$maxWidth: $maxW + px;
+$minWidtch: 320px;
+
+//*           - Шрифты
+$font-main: 'Nunito', sans-serif;
+
+//*           - Цвета
+$color-green: #27ae60;
+$color-black: #192a56;
+$color-light: #666;
+
+//*           - Прочее
+$box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+// ========================================
+
+
+
+//*                                 Миксины
+// ========================================
+//*           - Адаптивный шрифт
+@mixin adaptiv-font($pcSize, $mobSize) 
+{
+    $addSize: $pcSize - $mobSize;
+    $maxW: $maxW - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxW}));
+}
+// ========================================
+
+
+
+//*                                 General
+// ========================================
+html,
+body
+{
+    font-size: 62.5%; // 10px
+    font-family: $font-main;
+    scroll-behavior: smooth; // плавный скраолл
+
+    @media (max-width: 991px) 
+    {
+        font-size: 55%;
+    }
+
+    @media (max-width: 770px) 
+    {
+       
+    }
+
+    @media (max-width: 450px) 
+    {
+        font-size: 50%;
+    }
+}
+// =======================================
+
+
+
+//*                        wrapper + border
+// ========================================
+// .wrapper
+// {
+
+// }
+// .border
+// {
+//     max-width: $maxWidth;
+//     min-width: $minWidtch;
+//     margin: 0 auto;
+// }
+// ========================================
+
+
+
+//*                        wrapper + border
+// ========================================
+header
+{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background: #fff;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: $box-shadow;
+
+    /*
+        Logo
+    */
+    .header__logo
+    {
+        color: $color-black;
+        font-size: 2.5rem;
+        font-weight: bolder;
+
+        i
+        {
+            color: $color-green;
+        }
+    }
+
+    /*
+        Menu
+    */
+    .header__menu
+    {
+        @media (max-width: 770px) 
+            {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                border-top: .1rem solid rgba(0,0,0,.2);
+                border-bottom: .1rem solid rgba(0,0,0,.2);
+                padding:1rem;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                &.menu-open
+                {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                }
+            }
+
+        a
+        {
+            font-size: 1.7rem;
+            border-radius: .5rem;
+            padding: .5rem  1.5rem;
+            color: $color-light;
+
+            &:active,
+            &:hover
+            {
+                color: #fff;
+                background: $color-green;
+            }
+
+            @media (max-width: 770px) 
+            {
+                display: block;
+                padding:1.5rem;
+                margin:1rem;
+                font-size: 2rem;
+                background:#eee;
+            }
+        }
+    }
+
+    /*
+        Icons
+    */
+    .header__icons
+    {
+        i,a
+        {
+            display: inline-block;
+            position: relative;
+            align-self: center;
+            width:4.5rem;
+            height:4.5rem;
+            border-radius: 50%;
+            background: #eee;
+            font-size: 1.7rem;
+            line-height: 5rem;
+            text-align: center;
+            color:$color-black;
+            cursor: pointer;
+            margin-left: 1.5rem;
+            transition: all .3s linear;
+            &:hover
+            {
+                color:#fff;
+                background: $color-green;
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /*
+            Burger
+        */
+        #menu-bars
+        {
+            display: none;
+            @media (max-width: 770px) 
+            {
+                display: inline-block;
+            }
+        }
+    }
+}
+// ========================================

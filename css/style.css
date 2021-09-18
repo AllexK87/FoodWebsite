@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  text-transform: capitalize;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+}
+
+a, a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+input {
+  font-size: inherit;
+}
+
+button {
+  font-size: inherit;
+  cursor: pointer;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 991px) {
+  html,
+  body {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  html,
+  body {
+    font-size: 50%;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 1rem 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1000;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  /*
+        Logo
+    */
+  /*
+        Menu
+    */
+  /*
+        Icons
+    */
+}
+
+header .header__logo {
+  color: #192a56;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+header .header__logo i {
+  color: #27ae60;
+}
+
+@media (max-width: 770px) {
+  header .header__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .header__menu.menu-open {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+header .header__menu a {
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  padding: .5rem  1.5rem;
+  color: #666;
+}
+
+header .header__menu a:active, header .header__menu a:hover {
+  color: #fff;
+  background: #27ae60;
+}
+
+@media (max-width: 770px) {
+  header .header__menu a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: #eee;
+  }
+}
+
+header .header__icons {
+  /*
+            Burger
+        */
+}
+
+header .header__icons i, header .header__icons a {
+  display: inline-block;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: #eee;
+  font-size: 1.7rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #192a56;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+header .header__icons i:hover, header .header__icons a:hover {
+  color: #fff;
+  background: #27ae60;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+header .header__icons #menu-bars {
+  display: none;
+}
+
+@media (max-width: 770px) {
+  header .header__icons #menu-bars {
+    display: inline-block;
+  }
+}
