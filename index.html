@@ -9,6 +9,10 @@
     <!-- Иконочный шрифт -->
     <link rel="stylesheet" href="css/ico-font.css">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
+
     <!-- Стили -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -41,7 +45,80 @@
     </header>
     <!-- header ends -->
 
-<!-- Script -->
-<script src="js/script.js"></script>
+    <!-- Поиск -->
+
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="ic-search"></label>
+        <i class="ic-times" id="close"></i>
+    </form>
+
+    <!-- End поск -->
+
+    <!-- Slaider start -->
+
+    <section class="home" id='home'>
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper home-slider__wrapper">
+
+                <!-- Slides -->
+                <div class="swiper-slide home-slider__slaide">
+                    <div class="home-slider__content">
+                        <span>our special dish</span>
+                        <h3>spicy noodles</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                    <div class="home-slider__imgBx">
+                        <img src="img/home-img-1.png" alt="img1">
+                    </div>
+                </div>
+                <div class="swiper-slide home-slider__slaide">
+                    <div class="home-slider__content">
+                        <span>our special dish</span>
+                        <h3>fried chicken</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                    <div class="home-slider__imgBx">
+                        <img src="img/home-img-2.png" alt="img2">
+                    </div>
+                </div>
+                <div class="swiper-slide home-slider__slaide">
+                    <div class="home-slider__content">
+                        <span>our special dish</span>
+                        <h3>hot pizza</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                    <div class="home-slider__imgBx">
+                        <img src="img/home-img-3.png" alt="img3">
+                    </div>
+                </div>
+                <!-- Slides end -->
+                
+            </div>
+
+            <!-- Navigaition slider -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Slaider end -->
+
+
+
+
+
+    <!-- Swiper -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
 </body>
 </html>
