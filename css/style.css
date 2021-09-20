@@ -56,6 +56,25 @@ section {
   padding: 2rem 9%;
 }
 
+section:nth-child(even) {
+  background: #eee;
+}
+
+.sub-heading {
+  text-align: center;
+  color: #27ae60;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.heading {
+  text-align: center;
+  color: #192a56;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
 .btn {
   margin-top: 1rem;
   display: inline-block;
@@ -274,12 +293,6 @@ header .header__icons #menu-bars {
   height: 100%;
 }
 
-.ome-slider__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .home-slider__slaide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,4 +352,85 @@ header .header__icons #menu-bars {
   background-color: #27ae60;
   width: 10px;
   height: 10px;
+}
+
+.dishes .dishes__boxes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(28rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem;
+}
+
+.dishes .dishes__boxes .dishes__box {
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: .5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.dishes .dishes__boxes .dishes__box .ic-heart, .dishes .dishes__boxes .dishes__box .ic-eye {
+  position: absolute;
+  top: 1.5rem;
+  background: #eee;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5.5rem;
+  font-size: 2rem;
+  color: #192a56;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.dishes .dishes__boxes .dishes__box .ic-heart:hover, .dishes .dishes__boxes .dishes__box .ic-eye:hover {
+  color: #fff;
+  background: #27ae60;
+}
+
+.dishes .dishes__boxes .dishes__box .ic-heart {
+  right: -15rem;
+}
+
+.dishes .dishes__boxes .dishes__box .ic-eye {
+  left: -15rem;
+}
+
+.dishes .dishes__boxes .dishes__box .dishes__stars {
+  padding: 1rem 0;
+}
+
+.dishes .dishes__boxes .dishes__box .dishes__stars i {
+  font-size: 1.7rem;
+  color: #27ae60;
+}
+
+.dishes .dishes__boxes .dishes__box h3 {
+  font-size: 2.5rem;
+  color: #192a56;
+}
+
+.dishes .dishes__boxes .dishes__box img {
+  height: 17rem;
+  margin: 1rem 0;
+}
+
+.dishes .dishes__boxes .dishes__box span {
+  color: #27ae60;
+  font-weight: bolder;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+
+.dishes .dishes__boxes .dishes__box:hover .ic-heart {
+  right: 1.5rem;
+}
+
+.dishes .dishes__boxes .dishes__box:hover .ic-eye {
+  left: 1.5rem;
 }

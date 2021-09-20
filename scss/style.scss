@@ -103,6 +103,27 @@ body
 section
 {
     padding:2rem 9%;
+
+    &:nth-child(even)
+    {
+        background: #eee;
+    }
+}
+.sub-heading
+{
+    text-align: center;
+    color:$color-green;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading
+{
+    text-align: center;
+    color:$color-black;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 .btn
@@ -333,11 +354,7 @@ header
     width: 100%;
     height: 100%;
 }
-.ome-slider__wrapper
-{
-    display: flex;
 
-}
 .home-slider__slaide 
 {
     display: flex;
@@ -349,7 +366,6 @@ header
     .home-slider__content 
     {
         flex: 1 1 45rem;
-        // flex: 1 1 45%;
 
         span
         {
@@ -379,7 +395,6 @@ header
     .home-slider__imgBx 
     {
         flex: 1 1 45rem;
-        // flex: 1 1 45%;
 
         img
         {
@@ -402,4 +417,104 @@ header
         height: 10px;
     }
 }
+// ========================================
+
+
+
+//*                                  dishes
+// ========================================
+.dishes 
+{
+    .dishes__boxes 
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        gap: 1.5rem;
+
+        .dishes__box 
+        {
+            padding:2.5rem;
+            background:#fff;
+            border-radius: .5rem;
+            border:.1rem solid rgba(0,0,0,.2);
+            box-shadow: $box-shadow;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+
+            .ic-heart, .ic-eye 
+            {
+                position: absolute;
+                top:1.5rem;
+                background:#eee;
+                border-radius: 50%;
+                height: 5rem;
+                width:5rem;
+                line-height: 5.5rem;
+                font-size: 2rem;
+                color: $color-black;
+                transition: all .2s linear;
+                &:hover
+                {
+                    color: #fff;
+                    background: $color-green;
+                }
+            }
+
+            .ic-heart
+            {
+                right:-15rem;
+            }
+
+            .ic-eye
+            {
+                left:-15rem;
+            }
+
+            .dishes__stars 
+            {
+                padding:1rem 0;
+
+                i
+                {
+                    font-size: 1.7rem;
+                    color: $color-green;
+                }
+            }
+
+            h3
+            {
+                font-size: 2.5rem;
+                color: $color-black;
+            }
+
+            img
+            {
+                height:17rem;
+                margin:1rem 0;
+            }
+
+            span
+            {
+                color: $color-green;
+                font-weight: bolder;
+                margin-right: 1rem;
+                font-size: 2.5rem;
+            }
+
+            &:hover .ic-heart
+            {
+                right: 1.5rem;
+            }
+
+            &:hover .ic-eye
+            {
+                left: 1.5rem;
+            }
+        }
+    }
+}
+
+
+
 // ========================================
