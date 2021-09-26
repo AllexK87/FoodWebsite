@@ -599,3 +599,56 @@ header .header__icons #menu-bars {
   color: #27ae60;
   margin-left: 1rem;
 }
+
+.review__sleid {
+  padding: 2rem;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+  position: relative;
+}
+
+.review__sleid .ic-quote {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 6rem;
+  color: #ccc;
+}
+
+.review__sleid .review__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.review__sleid .review__user img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.review__sleid .review__user .review__user-info h3 {
+  color: #192a56;
+  font-size: 2rem;
+  padding-bottom: .5rem;
+}
+
+.review__sleid .review__user .review__user-info .review__stars i {
+  font-size: 1.3rem;
+  color: #27ae60;
+}
+
+.review__sleid p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #666;
+}

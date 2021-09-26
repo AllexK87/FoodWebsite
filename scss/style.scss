@@ -594,7 +594,7 @@ header
 
 
 
-//*                                menu  
+//*                                    menu  
 // ========================================
 .menu__box-card 
 {
@@ -684,5 +684,76 @@ header
             }
         }
     }
+}
+// ========================================
+
+
+
+//*                                  review  
+// ========================================
+.review__sleid 
+{
+    padding:2rem;
+    box-shadow: $box-shadow;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;  
+    // width: 38rem;
+    // margin-left: 2rem;
+
+    .ic-quote 
+    {
+        position: absolute;
+        top:2rem; right:2rem;
+        font-size: 6rem;
+        color:#ccc;
+    }
+
+    .review__user 
+    {
+        display: flex;
+        gap:1.5rem;
+        align-items: center;
+        padding-bottom: 1.5rem;
+
+        img
+        {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review__user-info 
+        {
+            h3
+            {
+                color: $color-black;
+                font-size: 2rem;
+                padding-bottom: .5rem;  
+            }
+    
+            .review__stars i
+            {
+                font-size: 1.3rem;
+                color: $color-green;
+            }
+        }
+    }
+
+    p
+    {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: $color-light;
+    }
+}
+
+
+.star 
+{
+}
+.star-half 
+{
 }
 // ========================================
